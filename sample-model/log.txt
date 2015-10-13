@@ -1,0 +1,341 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for net.sf.sociaal:phat-framework:jar:1.0.2-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 128, column 10
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building PHAT Framework 1.0.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> exec-maven-plugin:1.2.1:java (default-cli) @ phat-framework >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ phat-framework ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:copy-resources (copy-resources-licenses) @ phat-framework ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 13 resources
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:copy-resources (copy-resources-src) @ phat-framework ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/pablo/ucm/sociAAL/code/paams-falling-and-assistance/commonsrc
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.0:build-classpath (build-classpath) @ phat-framework ---
+[INFO] Skipped writing classpath file '/home/pablo/ucm/sociAAL/code/paams-falling-and-assistance/target/classpath.txt'.  No changes found.
+[INFO] 
+[INFO] <<< exec-maven-plugin:1.2.1:java (default-cli) @ phat-framework <<<
+[INFO] 
+[INFO] --- exec-maven-plugin:1.2.1:java (default-cli) @ phat-framework ---
+Inititalize AudioAppState
+Inititalize WorldAppState
+Create calendar!!!!
+Inititalize HouseAppState
+Inititalize BodiesAppState
+Inititalize DevicesAppState
+Inititalize AgentsAppState
+
+
+Buinding House3room2bath-objnode
+Running Command: CreateBodyTypeCommand(E3Patient, Models/male/male.j3o)
+Running Command: BodyLabelCommand(E3Patient,show=false)
+Running Command: CreateBodyTypeCommand(E3Husband, Models/male/male.j3o)
+Running Command: BodyLabelCommand(E3Husband,show=false)
+Running Command: SetBodyInHouseSpaceCommand(E3Patient, BedRoom1RightSide)
+Running Command: SetBodyInHouseSpaceCommand(E3Husband, Kitchen)
+MicrophoneControl created!!
+MicrophoneControl created!!
+AndroidVirtualDevice(Smartphone1,emulator-5554,Smartphone1)
+AVD emulator-5554 has already launched!
+emulator-5554: AVD Launched!
+emulator-5554: Connect...connect()
+mChimpchat = com.android.chimpchat.ChimpChat@37c1b122
+display.heiht:800
+display.width:480
+ Done! true
+emulator-5554: Sending vapi.props file...adb -s emulator-5554 push /home/pablo/ucm/sociAAL/code/paams-falling-and-assistance/vapi.props /sdcard/vapi.props
+Done!
+IP:PORT -> /155.54.205.214:60000
+ServerSocket!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+New Service: type=camera,ip:port=155.54.205.214:60000
+add type=camera,ip:port=155.54.205.214:60000
+IP:PORT -> /155.54.205.214:60001
+New Service: type=microphone,ip:port=155.54.205.214:60001
+add type=microphone,ip:port=155.54.205.214:60001
+IP:PORT -> /155.54.205.214:60002
+New Service: type=accelerometer,ip:port=155.54.205.214:60002
+add type=accelerometer,ip:port=155.54.205.214:60002
+Nuevo cliente: Socket[addr=/155.54.205.214,port=36894,localport=65056]
+Request: Smartphone1, accelerometer
+Service: type=accelerometer,ip:port=155.54.205.214:60002
+Nuevo Cliente: Socket[addr=/155.54.205.214,port=57585,localport=60002]
+AndroidVirtualDevice(Smartphone1,emulator-5556,Smartphone2)
+AVD emulator-5556 has already launched!
+emulator-5556: AVD Launched!
+emulator-5556: Connect...connect()
+mChimpchat = com.android.chimpchat.ChimpChat@37c1b122
+display.heiht:null
+display.width:null
+ Done! true
+emulator-5556: Sending vapi.props file...adb -s emulator-5556 push /home/pablo/ucm/sociAAL/code/paams-falling-and-assistance/vapi.props /sdcard/vapi.props
+Done!
+IP:PORT -> /155.54.205.214:60003
+New Service: type=camera,ip:port=155.54.205.214:60003
+add type=camera,ip:port=155.54.205.214:60003
+IP:PORT -> /155.54.205.214:60004
+New Service: type=microphone,ip:port=155.54.205.214:60004
+add type=microphone,ip:port=155.54.205.214:60004
+IP:PORT -> /155.54.205.214:60005
+New Service: type=accelerometer,ip:port=155.54.205.214:60005
+add type=accelerometer,ip:port=155.54.205.214:60005
+E3Husband:E3Husband-AUTOMATON - Pending Transitions:
+	-FSM-E3Husband
+E3Husband, E3Husband-AUTOMATON automaton changes to state FSM-E3Husband
+E3Husband:E3HusbandCookingTIA - Pending Transitions:
+	-FSM-E3HusbandCookingTIA
+E3Husband, E3HusbandCookingTIA automaton changes to state FSM-E3HusbandCookingTIA
+E3Husband:CookingActivityActivity - Pending Transitions:
+	-CookingSeqDiagram
+E3Husband, CookingActivityActivity automaton changes to state CookingSeqDiagram
+E3Husband:CookingSeqDiagram - Pending Transitions:
+	-WaitTask1
+	-UseWCAutomaton-Sink
+E3Husband, CookingSeqDiagram automaton changes to state WaitTask1
+E3Patient:E3Patient-AUTOMATON - Pending Transitions:
+	-FSM-E3Patient
+E3Patient, E3Patient-AUTOMATON automaton changes to state FSM-E3Patient
+E3Patient:E3PatientGetReadyTimeTIA - Pending Transitions:
+	-FSM-E3PatientGetReadyTimeTIA
+E3Patient, E3PatientGetReadyTimeTIA automaton changes to state FSM-E3PatientGetReadyTimeTIA
+E3Patient:E3HaveShowerActivity - Pending Transitions:
+	-HaveAShowerSeqTasks
+E3Patient, E3HaveShowerActivity automaton changes to state HaveAShowerSeqTasks
+E3Patient:HaveAShowerSeqTasks - Pending Transitions:
+	-GoToBathRoom1
+	-TakeOffPidjama
+	-HaveAShowerAutomaton-Shower1
+	-Toweling
+	-PutOnClothes
+E3Patient, HaveAShowerSeqTasks automaton changes to state GoToBathRoom1
+Running Command: GoToSpaceCommand(E3Patient, BathRoom1)
+BodyId == E3Patient
+HOUSE ====> phat.structures.houses.House@14ce99b9
+LOC => (5.92225, -1.1920929E-7, 4.1151)
+setMinDistance => 0.5
+REACHABLE!!!!!
+E3Husband, CookingSeqDiagram automaton finished WaitTask1
+E3Husband:CookingSeqDiagram - Pending Transitions:
+	-UseWCAutomaton-Sink
+E3Husband, CookingSeqDiagram automaton changes to state UseWCAutomaton-Sink
+Running Command: GoCloseToObjectCommand(E3Husband,targetBodyId=Sink,minDistance=0.1)
+GoCloseToObjectCommand: Command State = Running
+TargetSpatial = Sink (Node)
+Object Sink found!
+Body E3Husband has NavMeshMovementControl!
+GoCloseToObjectCommand: minDistance = 0.1
+Loc = (0.92883027, 2.3841858E-7, 7.2955236)
+Object Sink reachable = true!
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1784
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1244
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1117
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1046
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 979
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 983
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 979
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1015
+GoCloseToObjectCommand: Command State = Success
+Running Command: AlignWithCommand(E3Husband, Sink)
+Running Command: OpenObjectCommand(E3Husband, Sink)
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1281
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1005
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1000
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 943
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 983
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1030
+E3Patient, HaveAShowerSeqTasks automaton finished GoToBathRoom1
+E3Patient:HaveAShowerSeqTasks - Pending Transitions:
+	-TakeOffPidjama
+	-HaveAShowerAutomaton-Shower1
+	-Toweling
+	-PutOnClothes
+E3Patient, HaveAShowerSeqTasks automaton changes to state TakeOffPidjama
+Event = PatientTakesOffPidjamaEvent
+isPerceptible = true
+EventProcessor = null
+Event = PatientTakesOffPidjamaEvent
+isPerceptible = true
+EventProcessor = phat.agents.events.EventProcessor@44dd06b5
+	Behavior=FallingActivityActivity
+asdf->FSM-E3Patient
+asdf->no
+asdf->E3PatientGetReadyTimeTIA
+asdf->no
+asdf->FSM-E3PatientGetReadyTimeTIA
+asdf->no
+asdf->E3HaveShowerActivity
+asdf->Activity
+Activity = E3HaveShowerActivity
+Current task = HaveAShowerSeqTasks
+E3Patient:E3HaveShowerActivity - Pending Transitions:
+	-FallingActivityActivity
+	-HaveAShowerSeqTasks
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 955
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 953
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 989
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1000
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1135
+E3Patient, HaveAShowerSeqTasks automaton finished TakeOffPidjama
+E3Patient, HaveAShowerSeqTasks automaton finished and no default state given, control returned to upper automaton. 
+E3Patient, E3HaveShowerActivity automaton finished HaveAShowerSeqTasks
+E3Patient:E3HaveShowerActivity - Pending Transitions:
+	-FallingActivityActivity
+	-HaveAShowerSeqTasks
+E3Patient, E3HaveShowerActivity automaton changes to state FallingActivityActivity
+E3Patient:FallingActivityActivity - Pending Transitions:
+	-FallTaskSpec
+E3Patient, FallingActivityActivity automaton changes to state FallTaskSpec
+E3Patient:FallTaskSpec - Pending Transitions:
+	-FallTask0
+E3Patient, FallTaskSpec automaton changes to state FallTask0
+Running Command: FallDownCommand(E3Patient)
+Controls of E3Patient
+	-AnimControl true
+	-SkeletonControl true
+	-PHATCharacterControl true
+	-BasicCharacterAnimControl true
+	-NavMeshMovementControl true
+	-PersuitAndAvoidControl true
+
+Controls of E3Patient
+	-AnimControl false
+	-PHATCharacterControl false
+	-BasicCharacterAnimControl true
+	-NavMeshMovementControl true
+	-PersuitAndAvoidControl true
+	-KinematicRagdollControl true
+	-SkeletonControl true
+
+E3Patient, FallTaskSpec automaton finished FallTask0
+E3Patient, FallTaskSpec automaton finished and no default state given, control returned to upper automaton. 
+Event = PatientFalling
+isPerceptible = true
+EventProcessor = null
+Event = PatientFalling
+isPerceptible = true
+EventProcessor = phat.agents.events.EventProcessor@5ce97206
+	Behavior=FallingResponseActivity
+asdf->FSM-E3Patient
+asdf->no
+asdf->E3PatientGetReadyTimeTIA
+asdf->no
+asdf->FSM-E3PatientGetReadyTimeTIA
+asdf->no
+asdf->E3HaveShowerActivity
+asdf->Activity
+Activity = E3HaveShowerActivity
+Current task = FallingActivityActivity
+E3Patient:E3HaveShowerActivity - Pending Transitions:
+	-FallingResponseActivity
+	-HaveAShowerSeqTasks
+E3Patient, FallingActivityActivity automaton finished FallTaskSpec
+E3Patient, FallingActivityActivity automaton finished and no default state given, control returned to upper automaton. 
+E3Patient, E3HaveShowerActivity automaton finished FallingActivityActivity
+E3Patient:E3HaveShowerActivity - Pending Transitions:
+	-FallingResponseActivity
+	-HaveAShowerSeqTasks
+E3Patient, E3HaveShowerActivity automaton changes to state FallingResponseActivity
+E3Patient:FallingResponseActivity - Pending Transitions:
+	-PatientFallingResponse
+E3Patient, FallingResponseActivity automaton changes to state PatientFallingResponse
+E3Patient:PatientFallingResponse - Pending Transitions:
+	-TryToStandUp
+	-AskForHelp
+	-WatingForAssitance
+E3Patient, PatientFallingResponse automaton changes to state TryToStandUp
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1074
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1449
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 995
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 976
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 992
+E3Patient, PatientFallingResponse automaton finished TryToStandUp
+E3Patient:PatientFallingResponse - Pending Transitions:
+	-AskForHelp
+	-WatingForAssitance
+E3Patient, PatientFallingResponse automaton changes to state AskForHelp
+Running Command: SayASentenceBodyCommand(E3Patient,message=I need help!)
+Wrote synthesized speech to ./assets/Sounds/voiceText-0.wav
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 956
+E3Patient, PatientFallingResponse automaton finished AskForHelp
+E3Patient:PatientFallingResponse - Pending Transitions:
+	-WatingForAssitance
+E3Patient, PatientFallingResponse automaton changes to state WatingForAssitance
+Event = PatientAskForHelp
+isPerceptible = true
+EventProcessor = phat.agents.events.EventProcessor@43c73316
+	Behavior=HelpPatientActivityActivity
+asdf->FSM-E3Husband
+asdf->no
+asdf->E3HusbandCookingTIA
+asdf->no
+asdf->FSM-E3HusbandCookingTIA
+asdf->no
+asdf->CookingActivityActivity
+asdf->Activity
+Activity = CookingActivityActivity
+Current task = CookingSeqDiagram
+E3Husband:CookingActivityActivity - Pending Transitions:
+	-HelpPatientActivityActivity
+	-CookingSeqDiagram
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 972
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1017
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1028
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1164
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 967
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1003
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 1075
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 951
+ServerManager Stopped!!
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 4551
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 662
+IChimpImage implementator = com.android.chimpchat.adb.AdbChimpImage
+takeSnapshot Time = 640

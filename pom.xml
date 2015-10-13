@@ -82,7 +82,7 @@
    	
     <modules>
         <module>sample-android-devices</module>
-        <module>basic-modeling-sample</module>
+        <module>sample-model</module>
     </modules>
     
    
