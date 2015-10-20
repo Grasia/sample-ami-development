@@ -75,9 +75,9 @@
         <jme.version>3.0.1</jme.version>
         <jali.version>1.0.4</jali.version>
         <jdos.version>1.0.3</jdos.version>
-	<sociaalml.version>1.0.4-SNAPSHOT</sociaalml.version>
+	<sociaalml.version>1.0.5-SNAPSHOT</sociaalml.version>
         <platform.version>4.1.1.4</platform.version>
-	<phat.version>1.0.5-SNAPSHOT</phat.version>
+	<phat.version>1.0.6-SNAPSHOT</phat.version>
     </properties>
    	
     <modules>
