@@ -64,12 +64,7 @@ public class AudioLevelXYPlotActivity extends Activity {
         }
     }
 
-    class RMSAudioRunnableTask implements Runnable {
-        @Override
-        public void run() {
-            process();
-        }
-    }
+   
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -146,61 +141,66 @@ public class AudioLevelXYPlotActivity extends Activity {
         processing = false;
     }
 
-    private void process() {
-        Log.d(TAG, "process()");
-        // Audio Format = PCM_SIGNED 44100.0 Hz, 16 bit, mono, 2 bytes/frame, little-endian
-        int frequency = 44100;
-        int channelConfiguration = AudioFormat.CHANNEL_CONFIGURATION_MONO;
-        int audioEncoding = AudioFormat.ENCODING_PCM_16BIT;
+    class RMSAudioRunnableTask implements Runnable {
+        @Override
+        public void run() {
+        	 Log.d(TAG, "process()");
+             // Audio Format = PCM_SIGNED 44100.0 Hz, 16 bit, mono, 2 bytes/frame, little-endian
+             int frequency = 44100;
+             int channelConfiguration = AudioFormat.CHANNEL_CONFIGURATION_MONO;
+             int audioEncoding = AudioFormat.ENCODING_PCM_16BIT;
 
-        try {
-            // Create a new AudioRecord object to record the audio.
-            int bufferSize = AudioRecordWrapper.getMinBufferSize(frequency,
-                    channelConfiguration, audioEncoding);
-            Log.d(TAG, "audioRecord...");
-            AudioRecordWrapper audioRecord = SimManager.getAudio(
-                    MediaRecorder.AudioSource.MIC, frequency,
-                    channelConfiguration, audioEncoding, bufferSize);
-            Log.d(TAG, "...audioRecord");
-            byte[] buffer = new byte[bufferSize];
-            Log.d(TAG, "startRecording...");
-            audioRecord.startRecording();
+             try {
+                 // Create a new AudioRecord object to record the audio.
+                 int bufferSize = AudioRecordWrapper.getMinBufferSize(frequency,
+                         channelConfiguration, audioEncoding);
+                 Log.d(TAG, "audioRecord...");
+                 AudioRecordWrapper audioRecord = SimManager.getAudio(
+                         MediaRecorder.AudioSource.MIC, frequency,
+                         channelConfiguration, audioEncoding, bufferSize);
+                 Log.d(TAG, "...audioRecord");
+                 byte[] buffer = new byte[bufferSize];
+                 Log.d(TAG, "startRecording...");
+                 audioRecord.startRecording();
 
-            AudioTrack audioTrack = new AudioTrack(
-                    AudioManager.STREAM_MUSIC,
-                    frequency,
-                    channelConfiguration,
-                    audioEncoding,
-                    bufferSize,
-                    AudioTrack.MODE_STREAM);
-            audioTrack.play();
-            audioTrack.setPlaybackRate(frequency);
+                 AudioTrack audioTrack = new AudioTrack(
+                         AudioManager.STREAM_MUSIC,
+                         frequency,
+                         channelConfiguration,
+                         audioEncoding,
+                         bufferSize,
+                         AudioTrack.MODE_STREAM);
+                 audioTrack.play();
+                 audioTrack.setPlaybackRate(frequency);
 
-            double initialTime = (double) ((double) System.currentTimeMillis() / 1000.0);
-            Log.d(TAG, "initialTime = " + initialTime);
-            while (processing) {
-                int bufferReadResult = audioRecord.read(buffer, 0, bufferSize);
-                if (bufferReadResult > 0) {
-                    double rms = AudioTools.volumeRMS(buffer, 0, bufferReadResult);
-                    double ct = (double) ((double) System.currentTimeMillis() / 1000.0);
+                 double initialTime = (double) ((double) System.currentTimeMillis() / 1000.0);
+                 Log.d(TAG, "initialTime = " + initialTime);
+                 while (processing) {
+                     int bufferReadResult = audioRecord.read(buffer, 0, bufferSize);
+                     if (bufferReadResult > 0) {
+                         double rms = AudioTools.volumeRMS(buffer, 0, bufferReadResult);
+                         double ct = (double) ((double) System.currentTimeMillis() / 1000.0);
 
-                    audioSeries.add(ct - initialTime, rms);
-                    Message m = mEventHandler.obtainMessage(UPDATE_RMS, 0, 0, rms);
-                    mEventHandler.sendMessage(m);
-                    audioTrack.write(buffer, 0, bufferReadResult);
-                }
-            }
+                         audioSeries.add(ct - initialTime, rms);
+                         Message m = mEventHandler.obtainMessage(UPDATE_RMS, 0, 0, rms);
+                         mEventHandler.sendMessage(m);
+                         audioTrack.write(buffer, 0, bufferReadResult);
+                     }
+                 }
 
-            audioRecord.stop();
-            audioTrack.stop();
+                 audioRecord.stop();
+                 audioTrack.stop();
 
-        } catch (Throwable t) {
-            Log.e("AudioRecord", "Recording Failed");
-            if (t != null && t.getMessage() != null) {
-                Log.e("AudioRecord", t.getMessage());
-            }
+             } catch (Throwable t) {
+                 Log.e("AudioRecord", "Recording Failed");
+                 if (t != null && t.getMessage() != null) {
+                     Log.e("AudioRecord", t.getMessage());
+                 }
+             }
         }
     }
+    
+  
 
     private class EventHandler extends Handler {
 

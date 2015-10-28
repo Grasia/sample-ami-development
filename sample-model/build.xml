@@ -4,7 +4,7 @@
 <!-- Ant build file (http://ant.apache.org/) for Ant 1.6.2 or above.        -->
 <!-- ====================================================================== -->
 
-<project name="editor" default="package" basedir="." xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+<project name="editor" default="package" basedir="." xmlns:artifact="antlib:org.apache.maven.artifact.ant" xmlns:if="ant:if">
 
   <property environment="env"/>
   
@@ -27,6 +27,8 @@
   <property name="maven.src.dir" value="${env.M2_HOME}"/>
   <property name="pom.dir" value="."/>
 
+
+
  <import file="target/generated/buildext.xml" optional="true"/>
 
  <target name="init" unless="env.M2_HOME">
@@ -46,6 +48,21 @@
    <antcall target="generateclasspathfrommaven"/>  
    <loadfile srcFile="target/classpath.txt" property="mavenclasspath" />  
   </target>
+
+<target name="runSimTwoCameras1" depends="compile">
+	<condition property="arg.ml" value="-ml">
+		    <isset property="ml"/>
+	</condition>
+	  <echoproperties regex="arg.ml"/>
+        <java fork="true" failonerror="true" maxmemory="300m"
+              classname="phat.sim.MainSimTwoCamerasPHATSimulation">		
+		<arg value="${arg.ml}"/>
+		<classpath>			  
+			<pathelement path="${maven.build.outputDir}" />
+			<pathelement path="${mavenclasspath}" />              
+		</classpath>
+        </java>
+</target>
 
 <!--
 This is the macro definition for maven Ant task
