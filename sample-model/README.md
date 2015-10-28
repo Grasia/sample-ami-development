@@ -61,7 +61,7 @@ Where XXX is the name of the intended scenario:
 * SimAppBodyPosHandNoSymptoms: No tremors with the falling detection device attached to the patient's hand
 * SimAppBodyPosChest: low tremors with the falling detection device attached to the patient's chest
 * SimAppBodyPosHand: low tremors with the falling detection device attached to the patient's hand
-* SimTwoDevices: a camera capture device attached to patient relative's right hand wrist plus a fall detection device attached to the patient's right hand wrist
+* SimTwoCameras: two cameras, one attached to the patient's wrist and the other to the caregiver's wrist
 * SimAppCamera: a camera attached to the patient's right hand wrist
 
 This will launch the whole system (3D environment and Android emulators). If you close the terminal, emulators and 3D environment will close. It takes a while to launch and if you are modifying the specification, it is a time consuming task to launch and relaunch. 
