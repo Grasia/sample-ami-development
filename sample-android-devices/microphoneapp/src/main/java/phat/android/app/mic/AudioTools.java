@@ -33,4 +33,24 @@ public class AudioTools {
 		return rootMeanSquare;
 	}
 
+	static final double mAlpha = 0.9;
+	static final double mGain = 0.0044;
+	static double mRmsSmoothed = 0.5;
+
+	public static double volumeRMSdB(byte[] raw, int offset, int size) {
+		double rms = 0;
+		for (int i = offset; i < size; i++) {
+			rms += raw[i] * raw[i];
+		}
+		rms = Math.sqrt(rms / size);
+            /*Compute a smoothed version for less flickering of the
+            // display.*/
+		mRmsSmoothed = mRmsSmoothed * mAlpha + (1 - mAlpha) * rms;
+
+		double rmsdB = mGain * mRmsSmoothed > 0.0 ?
+				20.0 * Math.log10(mGain * mRmsSmoothed) :
+				-100.0;
+		System.out.println("rmsdB = "+rmsdB);
+		return rmsdB;
+	}
 }

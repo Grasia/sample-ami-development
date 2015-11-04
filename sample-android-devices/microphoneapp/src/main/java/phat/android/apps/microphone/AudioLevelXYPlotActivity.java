@@ -117,7 +117,7 @@ public class AudioLevelXYPlotActivity extends Activity {
         dynamicPlot.setRangeValueFormat(new DecimalFormat("###.#"));
 
         // uncomment this line to freeze the range boundaries:
-        dynamicPlot.setRangeBoundaries(-0.1, 10, BoundaryMode.AUTO);
+        dynamicPlot.setRangeBoundaries(-0.1, 50, BoundaryMode.FIXED);
         dynamicPlot.setDomainBoundaries(0, 10, BoundaryMode.AUTO);
 
         // create a dash effect for domain and range grid lines:

@@ -4,7 +4,7 @@
     <string name="app_name">PHAT-Tests</string>
     <string name="app_relative">Relative Cam</string>
     <string name="app_patient">Patient cam</string>
-    <string name="app_bath">Bathroom Mic device</string>
+    <string name="app_bath">Mic device</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
