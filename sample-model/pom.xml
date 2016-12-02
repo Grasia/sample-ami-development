@@ -284,23 +284,7 @@
               <artifactItems>
 		<artifactItem>
 			<groupId>net.sf.mydevel</groupId>
-			<artifactId>cameraapp</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-			<type>apk</type>
-			<overWrite>true</overWrite>									
-			<outputDirectory>target/apks</outputDirectory>
-		</artifactItem>
-		<artifactItem>
-			<groupId>net.sf.mydevel</groupId>
-			<artifactId>bodyfalldetection</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-			<type>apk</type>
-			<overWrite>true</overWrite>									
-			<outputDirectory>target/apks</outputDirectory>
-		</artifactItem>					
-		<artifactItem>
-			<groupId>net.sf.mydevel</groupId>
-			<artifactId>microphoneapp</artifactId>
+			<artifactId>accelerometer</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 			<type>apk</type>
 			<overWrite>true</overWrite>									

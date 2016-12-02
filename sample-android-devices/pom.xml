@@ -68,9 +68,7 @@
     
   
     <modules>
-        <module>cameraapp</module>
-        <module>bodyfalldetection</module>
-        <module>microphoneapp</module>
+	<module>accelerometer</module>
     </modules>
     
     <reporting>
