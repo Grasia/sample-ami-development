@@ -12,7 +12,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <name>sample AmI development</name>
     <description>An example of how a development with AIDE can be</description>
-    <url>https://grasia.fdi.ucm.es/aide</url>    
+    <url>https://grasia.fdi.ucm.es/aide</url>
     <licenses>
         <license>
             <name>The GPL V3</name>
@@ -23,7 +23,7 @@
     <scm>
         <connection>scm:git:git://github.com/GRASIA/sample-android-devices.git</connection>
         <developerConnection>scm:git:git@github.com:GRASIA/sample-android-devices.git</developerConnection>
-        <url>https://github.com/Grasia/sample-android-devices</url>		
+        <url>https://github.com/Grasia/sample-android-devices</url>
     </scm>
     <developers>
         <developer>
@@ -66,26 +66,27 @@
             </build>
         </profile>
     </profiles>
-    
-    
+
+
     <properties>
         <vendor>GRASIA Research Group</vendor>
         <developername>Pablo Campillo-Sanchez</developername>
         <developeremail>pabcampi@ucm.es</developeremail>
         <jme.version>3.0.1</jme.version>
-        <jali.version>1.0.8-SNAPSHOT</jali.version>
-        <jdos.version>1.0.5</jdos.version>
-		<sociaalml.version>1.0.8-SNAPSHOT</sociaalml.version>
+        <jali.version>1.0.9</jali.version>
+        <jdos.version>1.0.8</jdos.version>
+		    <sociaalml.version>1.0.11</sociaalml.version>
         <platform.version>4.1.1.4</platform.version>
-	<phat.version>1.0.10-SNAPSHOT</phat.version>
+	    <phat.version>1.0.11</phat.version>
+	    <java.version>1.7</java.version>
     </properties>
-   	
+
     <modules>
         <module>sample-android-devices</module>
         <module>sample-model</module>
     </modules>
-    
-   
 
-    
+
+
+
 </project>
